@@ -4,7 +4,7 @@ const core = require("@actions/core");
 async function main() {
     try {
         const result = await semanticRelease({
-            dryRun: true, "plugins": [
+            dryRun: true, "release": { "branches": [ "main" ] }, "plugins": [
                 ["@semantic-release/commit-analyzer", {
                     "preset": "angular",
                 }],
